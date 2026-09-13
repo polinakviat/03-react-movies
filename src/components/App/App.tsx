@@ -16,7 +16,7 @@ export default function App() {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [Empty, setEmpty] = useState(false);
+  const [empty, setEmpty] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
   
   const handleSearch = async (query: string) => {
@@ -65,6 +65,7 @@ export default function App() {
       )}
       {isLoading && <Loader />}
       {error && <ErrorMessage message={error} />}
+      {empty && <ErrorMessage message="No movies found for your request." />}
         {selectedMovie && (
         <MovieModal movie={selectedMovie} onClose={handleCloseModal} />
       )}
