@@ -23,6 +23,13 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
         else {
       toast.error('Please enter your search query.');
         }
+        const setQuery = (query: string) => {
+            const input = e.currentTarget.querySelector<HTMLInputElement>('input[name="query"]');
+            if (input) {
+                input.value = query;
+            }
+        };
+        setQuery('');
     };
 
     return (
