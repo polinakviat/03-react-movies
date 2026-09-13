@@ -6,16 +6,12 @@ import { getPopularMovies } from '../services/tmdbApi.ts';
 import { useState } from 'react';
 import MovieGrid from '../components/MovieGrid.tsx';
 import type { Movie } from '../types/movie.ts';
-import  css from './components/Loader.module.css'
+import  css from '../components/Loader.module.css'
 import { Toaster } from 'react-hot-toast';
 import MovieModal from '../components/MovieModal.tsx';
 
 export default function App() {
 
-  <Toaster
-  position="top-center"
-  reverseOrder={false}
-  />
   const [movies, setMovies] = useState<Movie[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
