@@ -1,14 +1,14 @@
 // import { useState } from 'react';
 //import css from './App.module.css';
 // import VoteStats from '../VoteStats/VoteStats';
-import SearchBar from '../components/SearchBar/SearchBar.tsx';
-import { getPopularMovies } from '../services/tmdbApi.ts';
+import SearchBar from '../SearchBar/SearchBar.tsx';
+import { getPopularMovies } from '../../services/tmdbApi.ts';
 import { useState } from 'react';
-import MovieGrid from '../components/MovieGrid/MovieGrid.tsx';
-import type { Movie } from '../types/movie.ts';
-import css from '../components/Loader/Loader.module.css';
+import MovieGrid from '../MovieGrid/MovieGrid.tsx';
+import type { Movie } from '../../types/movie.ts';
+import css from '../Loader/Loader.module.css';
 import { Toaster } from 'react-hot-toast';
-import MovieModal from '../components/MovieModal/MovieModal.tsx';
+import MovieModal from '../MovieModal/MovieModal.tsx';
 
 export default function App() {
 
